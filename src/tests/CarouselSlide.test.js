@@ -12,6 +12,14 @@ describe('CarouselSlide', () => {
       description="Default test image"
     />);
   });
+
+  it('renders correctly', () => {
+    wrapper.setProps({
+      description: 'Description',
+      attribution: 'Attibution',
+    });
+    expect(wrapper).toMatchSnapshot()
+  });
   it('renders a <figure>', () => {
     expect(wrapper.type()).toBe('figure')
   })
